@@ -12,6 +12,10 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<logger level="INFO" doc:name="Start-Flow" doc:id="e3faaf68-9508-4092-bd76-0bdeec64c5f7" message="Start-Flow"/>
 		<set-variable value="#[attributes.queryParams.name]" doc:name="Set name var" doc:id="a0f3e567-152d-49da-81cd-6fc5405de956" variableName="name"/>
 		<set-payload value='#["welcome " ++ vars.name as String default "" ++ " to Mulesoft"]' doc:name="Set greeting message" doc:id="ff53ea65-2396-42df-b1d2-0abab72b3707" />
+		<logger level="INFO" doc:name="Logger" doc:id="4b393169-46ca-41ba-ad22-c2f877c341cf" message="#[payload]"/>
 		<logger level="INFO" doc:name="End-Flow" doc:id="896a19d3-f0a5-4551-ac30-5be0b4fb9ded" message="End-Flow"/>
+	</flow>
+	<flow name="hello-worldFlow1" doc:id="4f642bc7-9a20-4e76-9e4e-c81a6acb4bb3" >
+		<logger level="INFO" doc:name="Logger" doc:id="ebec3799-3706-44a1-aa12-ff41f279faa1" />
 	</flow>
 </mule>
